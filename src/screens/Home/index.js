@@ -5,6 +5,7 @@ import BannerMovies from '../../components/banner';
 import Filmes from '../../data/filmes';
 import Series from '../../data/series';
 import CardMovies from '../../components/cardFilmes';
+import styles from './style';
 
 export default function Home() {
   return (
@@ -50,13 +51,4 @@ export default function Home() {
     </View>
     </View>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#141A29',
-    alignItems: 'center',
-    
-  },
-});
+};

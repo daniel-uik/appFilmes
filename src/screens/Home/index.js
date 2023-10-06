@@ -1,6 +1,7 @@
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import Header from '../../components/header';
 import Search from '../../components/searchBar';
+import React,{useState, useEffect} from 'react';
 import BannerMovies from '../../components/banner';
 import Filmes from '../../data/filmes';
 import Series from '../../data/series';
@@ -8,6 +9,21 @@ import CardMovies from '../../components/cardFilmes';
 import styles from './style';
 
 export default function Home() {
+  
+  const [movies,setMovies] = useState([]);
+
+  useEffect(()=>{
+
+    async function buscarFilmes(){
+      const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=24d9fd344f34a9bf4fcdbf5b027319b7&language=pt-BR');
+      const data = await response.json();
+      console.log(data);
+    }
+
+    buscarFilmes();
+
+  },[])
+
   return (
     <View style={styles.container}>
       <Header></Header>

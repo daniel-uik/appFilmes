@@ -14,7 +14,6 @@ export default function CardMovies({titulo,nota,imagem,sinopse}){
         <Image style={styles.images} source ={require(`../../Img/${imagem}`)} />
         <Text style ={styles.titulo}>{titulo} </Text> 
         <Text style ={styles.textNota}> {nota} </Text>
-        <Text style ={styles.sinopse}> {sinopse} </Text>
        
         </TouchableOpacity>
 

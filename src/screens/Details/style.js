@@ -1,40 +1,79 @@
 import { StyleSheet } from "react-native";
 
-const styles = StyleSheet.create({
 
-    container: {
-        backgroundColor: '#141A29',
-        alignItems: 'center',
-        height: '100vh'
-      },
+const styles= StyleSheet.create({
 
-    texto: {
-        color: 'white'
-    },
+container: {
+  flex:1,
+  backgroundColor: '#141a29',
+},
 
-    desc: {
-        color: 'white',
-        fontSize: 14
-    },
+titulo:{
+  color: '#fff',
+  fontSize:26,
+  fontWeight: "bold",
+  alignSelf: "center",
+  paddingTop:8,
+},
 
-    imagem:{
-        width: '100%',
-        height: 170,
-        borderRadius: 8
-    },
+notaContainer: {
+  flexDirection: 'row',
+  alignItems: 'baseline', 
+  marginTop: 10,
+  
+},
+  
+  textNota: {
+    fontSize: 20,
+    color: '#fff',
+    flex: 1, 
+    textAlign: 'right', 
+    paddingRight: 10,
+    
+  },
+  
+  starsContainer: {
+    flexDirection: 'row', 
+    alignItems: 'baseline', 
+    marginLeft: 10,
+  },
+  
+images:{
+    resizeMode: 'stretch',
+    width: '100%',
+    height:'60%',
+    borderRadius: 100,
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
+    borderBottomLeftRadius: 100,
+    borderBottomRightRadius: 100,
+    alignSelf: "center", 
+    marginBottom: 25
 
-    myStarStyle: {
-        color: 'yellow',
-        backgroundColor: 'transparent',
-        textShadowColor: 'black',
-        textShadowOffset: {width: 1, height: 1},
-        textShadowRadius: 2,
-      },
-      myEmptyStarStyle: {
-        color: 'white',
-      }
+
+},
+
+sinopse:{
+    marginTop: 30,
+    fontSize: 24,
+    fontWeight: "bold",
+    color: '#fff',
+    alignSelf: "Left",
+    marginLeft:12,
+    paddingBottom: 20
+},
+
+sinopseText:{
+  fontSize: 18,
+  color: '#fff',
+  fontFamily: "Nanun Gothic",
+  paddingLeft: 10,
+  backgroundColor: "#141a29"
+
+},
 
 
-});
 
-export default styles;
+})
+
+export default styles

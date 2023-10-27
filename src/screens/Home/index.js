@@ -18,6 +18,8 @@ export default function Home() {
       const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=24d9fd344f34a9bf4fcdbf5b027319b7&language=pt-BR');
       const data = await response.json();
       console.log(data);
+      console.log(data.results);
+      setMovies(data.results);
     }
 
     buscarFilmes();
@@ -41,6 +43,7 @@ export default function Home() {
             titulo = {item.nome}
             imagem = {item.imagem}
             nota = {item.nota}
+            sinopse={item.sinopse}
             
             
             
@@ -57,11 +60,7 @@ export default function Home() {
             <CardMovies
             titulo = {item.nome}
             imagem = {item.imagem}
-            nota = {item.nota}
-            
-            
-            
-            ></CardMovies>
+            nota = {item.nota} />
       )}
       />
     </View>
